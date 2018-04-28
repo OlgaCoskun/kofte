@@ -5,6 +5,7 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      event_destroy: 'Вы уверены?'
 
     # Перевод названий аттрибутов моделей
     attributes:
