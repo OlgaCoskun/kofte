@@ -4,7 +4,7 @@
 <% if errors.any? %>
   <div class="alert alert-danger">
     <div class="lead buffer-bottom">
-      В вашей форме <%= errors.count %> ошибок
+      В вашей форме <%= t 'errors', count: errors.count %>
     </div>
 
     <ul>
