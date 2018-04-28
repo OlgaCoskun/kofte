@@ -11,6 +11,10 @@ gem 'rails', '~> 5.1.6'
 
 gem 'devise'
 
+gem 'devise-i18n'
+
+gem 'russian'
+
 gem 'twitter-bootstrap-rails'
 # Use sqlite3 as the database for Active Record
 

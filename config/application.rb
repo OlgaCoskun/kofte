@@ -27,5 +27,8 @@ module Bbq
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.i18n.default_locale = :ru
+    config.time_zone = 'Moscow'
   end
 end

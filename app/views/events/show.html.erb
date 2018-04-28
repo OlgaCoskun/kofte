@@ -8,7 +8,10 @@
         <div class="col-md-6">
           <div class="event-description">
             <h1><%= @event.title %></h1>
-            <h3><%= @event.datetime %></h3>
+            <%# Для перевода времени в русский формат используем I18n %>
+            <%# Формат при этом используется из гема russian %>
+            <h3><%= l @event.datetime, format: :short %></h3>
+
             <h3>
               <small><%= link_to @event.address,
                                  "https://yandex.ru/maps/?text=#{@event.address}" %></small>
@@ -16,10 +19,12 @@
             <p><%= @event.description %></p>
           </div>
 
-          <div class="buffer-top">
-            <%= link_to 'Изменить', edit_event_path(@event),
-                        class: 'btn btn-primary' %>
-          </div>
+          <% if current_user_can_edit?(@event) %>
+            <div class="buffer-both">
+              <%= link_to 'Изменить', edit_event_path(@event),
+                          class: 'btn btn-primary' %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
