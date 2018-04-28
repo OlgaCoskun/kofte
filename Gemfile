@@ -16,6 +16,8 @@ gem 'devise-i18n'
 gem 'russian'
 
 gem 'twitter-bootstrap-rails'
+
+gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 
 # Use Puma as the app server
