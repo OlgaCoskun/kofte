@@ -1,16 +1,22 @@
 <%# Универсальный паршиал отображения ошибок валидации любой модели %>
-<% errors = model.errors %>
+<div class="row">
+  <div class="col-md-12">
+    <% errors = model.errors %>
 
-<% if errors.any? %>
-  <div class="alert alert-danger">
-    <div class="lead buffer-bottom">
-      В вашей форме <%= t 'errors', count: errors.count %>
-    </div>
+    <fieldset class="form-group">
+      <% if errors.any? %>
+        <div class="alert alert-danger">
+          <div class="lead buffer-bottom">
+            В вашей форме <%= t 'errors', count: errors.count %>
+          </div>
 
-    <ul>
-      <% errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+            <% errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
-    </ul>
+    </fieldset>
   </div>
-<% end %>
+</div>

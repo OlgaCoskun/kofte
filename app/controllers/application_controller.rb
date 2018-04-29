@@ -5,9 +5,17 @@ class ApplicationController < ActionController::Base
 
   # Настройка для работы девайза при правке профиля юзера
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters_for_create, if: :devise_controller?
+
 
   # Хелпер метод, доступный во вьюхах
   helper_method :current_user_can_edit?
+
+  protected
+
+  def configure_permitted_parameters_for_create
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password])
+  end
 
   # Настройка для девайза — разрешаем обновлять профиль, но обрезаем
   # параметры, связанные со сменой пароля.
