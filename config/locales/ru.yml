@@ -54,3 +54,11 @@ ru:
       one: '%{count} ошибка'
       few: '%{count} ошибки'
       many: '%{count} ошибок'
+
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
