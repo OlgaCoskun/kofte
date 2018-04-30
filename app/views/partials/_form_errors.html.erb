@@ -1,20 +1,17 @@
 <%# Универсальный паршиал отображения ошибок валидации любой модели %>
-<div class="row">
-  <div class="col-md-8">
-    <% errors = model.errors %>
+<% errors = model.errors %>
 
-    <% if errors.any? %>
-      <div class="alert alert-danger">
-        <div class="lead buffer-bottom">
-          В вашей форме <%= t 'errors', count: errors.count %>
-        </div>
+<% if model.errors.any? %>
+  <div class="alert fade in alert-warning">
 
-        <ul>
-          <% errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    <div class="lead buffer-bottom">
+      В вашей форме <%= t 'errors', count: errors.count %>
+    </div>
+
+    <%= devise_error_custom(model) %>
   </div>
-</div>
+<% end %>
