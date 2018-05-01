@@ -19,8 +19,6 @@ gem 'rails-i18n'
 
 gem 'twitter-bootstrap-rails'
 
-gem "font-awesome-rails"
-
 gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 

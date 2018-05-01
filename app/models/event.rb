@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :user
 
   # У события много комментариев и подписок
   has_many :comments, dependent: :destroy
