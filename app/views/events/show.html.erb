@@ -22,7 +22,7 @@
           <% if current_user_can_edit?(@event) %>
             <div class="buffer-both">
               <%= link_to 'Изменить', edit_event_path(@event), class: 'btn btn-primary' %>
-              <%= link_to 'Удалить', @event, method: :delete, class: 'btn btn-danger', data: { confirm: t('activerecord.models.event_destroy') } %>
+              <%= link_to 'Удалить', @event, method: :delete, class: 'btn btn-danger', data: {confirm: t('activerecord.models.event_destroy')} %>
             </div>
           <% end %>
         </div>
@@ -44,6 +44,28 @@
     </div>
   </div>
 
-
+  <div class="col-md-4">
+    <div class="event-owner">
+      <h4>Зовет:</h4>
+      <p><%= render partial: 'users/user', object: @event.user %></p>
+    </div>
+    <div class="event-subscriptions">
+      <h4>Пойдут:</h4>
+      <div>
+        <p>
+          <%= render partial: 'subscriptions/subscription',
+                     collection: @event.subscriptions.except(@new_subscription) %>
+        </p>
+      </div>
+    </div>
+    <div class="event-subscription-form">
+      <h4>Я пойду:</h4>
+      <div>
+        <%= render partial: 'subscriptions/form', locals: {
+            subscription: @new_subscription || @event.subscriptions.build
+        } %>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
