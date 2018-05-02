@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :subscriptions, dependent: :destroy
 
-  validates :name, presence: true, length: {maximum: 35}
+  validates :name, presence: true, length: {maximum: 20, too_long: "должно иметь не более %{count} символов"}
 
   validates :email, presence: true, length: {maximum: 255}
   validates :email, uniqueness: true
