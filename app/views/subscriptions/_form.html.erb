@@ -13,9 +13,10 @@
     </div>
   <% end %>
 
-<!--  <%# unless current_user == @event.user %>  2й вариант, чтобы убрать кнопку, запретить Подписку для автора события-->
+<!--  еще вариант, чтобы убрать кнопку, запретить Подписку для автора события-->
+  <% unless current_user == @event.user %>
     <div class="actions">
       <%= f.submit 'Подписаться', class: 'btn btn-primary' %>
     </div>
-  <%# end %>
+  <% end %>
 <% end %>
