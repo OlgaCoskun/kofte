@@ -11,8 +11,7 @@ class SubscriptionsController < ApplicationController
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 
-    if  current_user != @event.user  # 1й вариант, чтобы запретить Подписку для автора события
-    @new_subscription.save
+    if  current_user != @event.user && @new_subscription.save
       # Если сохранилась успешно, редирект на страницу самого события
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
