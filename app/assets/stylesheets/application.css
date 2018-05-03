@@ -63,4 +63,14 @@
   border-color: red;
 }
 
-br {content: ""}
+/*br {content: ""}*/
+/*br:after {content: "\00a0"}*/
+
+/*fieldset > br {displsy: none;}*/
+
+/*.field_with_errors > br {*/
+  /*display: block !important;*/
+/*}*/
+
+.form-group br {
+  display: none !important;}
