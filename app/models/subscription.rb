@@ -2,7 +2,17 @@ class Subscription < ApplicationRecord
   belongs_to :event
   belongs_to :user, optional: true
 
-  validates :event, presence: true
+  # validates :user, exclusion: { in: ->(event) { [event.user] } }  # Запрещаем автору событию подписку на свое событие
+
+  validate :denied_subscription
+
+  def denied_subscription
+    if user == event.user
+      errors.add(:user, :invalid) # Ошибка никогда не вылезет, так как форма будет скрыта для автора события
+    end
+  end
+
+  # validates :event, presence: true
 
   # проверки выполняются только если user не задан (незареганные приглашенные)
   validates :user_name, presence: true, unless: -> {user.present?}
