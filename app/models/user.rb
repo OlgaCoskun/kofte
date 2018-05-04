@@ -9,8 +9,9 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: {maximum: 20, too_long: "должно иметь не более %{count} символов"}
 
+  before_save { self.email = email.downcase }
   validates :email, presence: true, length: {maximum: 255}
-  validates :email, uniqueness: true
+  validates :email, uniqueness: { case_sensitive: false }
   validates :email, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
 
   before_validation :set_name, on: :create
