@@ -2,7 +2,7 @@ class Subscription < ApplicationRecord
   belongs_to :event
   belongs_to :user, optional: true
 
-  validate :email_dubl  # Запрещаем дублировать емайл для подписки на одно событие
+  validate :email_dubl, unless: -> {user.present?}  # Запрещаем дублировать емайл для подписки на одно событие
 
   def email_dubl
     errors.add(:user_email, :dubl_email) if User.exists?(email: self.user_email)
