@@ -2,15 +2,16 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
+  include Cloudinary::CarrierWave
 
   # Если мы работаем в локальной версии нашего приложения,
   # аватарки хранятся прямо в файловой системе, иначе используем fog
   # для загрузки их на Cloudinary
-  if Rails.env.production?
-    storage :fog
-  else
-    storage :file
-  end
+  # if Rails.env.production?
+  #   storage :fog
+  # else
+  #   storage :file
+  # end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
