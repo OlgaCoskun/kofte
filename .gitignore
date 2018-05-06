@@ -23,6 +23,9 @@
 .byebug_history
 .idea
 
+.DS_Store
+*/.DS_Store
+
 .env
 public/uploads
 
