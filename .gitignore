@@ -22,9 +22,5 @@
 
 .byebug_history
 .idea
-/config/*
 
-.byebug_history
-
-.env
 public/uploads
