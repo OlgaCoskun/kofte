@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
     # вложенный ресурс подписок (см. rake routes)
     resources :subscriptions, only: [:create, :destroy]
+
+    # Вложенные в ресурс события ресурсы фотографий
+    resources :photos, only: [:create, :destroy]
   end
 
   resources :users, only: [:show, :edit, :update]
