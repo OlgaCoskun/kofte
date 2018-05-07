@@ -2,7 +2,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-  include Cloudinary::CarrierWave
+  # include Cloudinary::CarrierWave
 
   # Если мы работаем в локальной версии нашего приложения,
   # аватарки хранятся прямо в файловой системе, иначе используем fog
