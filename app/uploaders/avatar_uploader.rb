@@ -7,6 +7,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Если мы работаем в локальной версии нашего приложения,
   # аватарки хранятся прямо в файловой системе, иначе используем fog
   # для загрузки их на Cloudinary
+
   # if Rails.env.production?
   #   storage :fog
   # else
