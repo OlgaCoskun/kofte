@@ -1,5 +1,14 @@
-<h1>Event#comment</h1>
+<h1><%= t '.title' %></h1>
+<p><%= @comment.body %></p>
+<p><%= t '.author' %>: <strong><%= @comment.user_name %></strong></p>
 
-<p>
-  <%= @greeting %>, find me in app/views/event_mailer/comment.html.erb
-</p>
+<hr/>
+
+<%= t '.event' %>
+<h3><%= @event.title %></h3>
+
+<%= t '.datetime' %>
+<h4><%= l @event.datetime %></h4>
+
+<%= t '.owner' %>
+<h4><%= @event.user.name %></h4>

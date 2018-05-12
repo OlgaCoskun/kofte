@@ -1,3 +1,11 @@
-Event#subscription
+Новая подписка
+----
 
-<%= @greeting %>, find me in app/views/event_mailer/subscription.text.erb
+Имя: <%= @name %>
+Email: <%=  @email %>
+
+----------------------
+
+Событие: <%= @event.title %>
+Состоится: <%= l @event.datetime %>
+Организатор: <%= @event.user.name %>
