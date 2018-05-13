@@ -1,0 +1,19 @@
+development:
+  cloud_name: cloudolga
+  api_key: '144655146287369'
+  api_secret: f9vbfzfxtnE1K1gkO0YKL8Janjw
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: cloudolga
+  api_key: '144655146287369'
+  api_secret: f9vbfzfxtnE1K1gkO0YKL8Janjw
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: cloudolga
+  api_key: '144655146287369'
+  api_secret: f9vbfzfxtnE1K1gkO0YKL8Janjw
+  enhance_image_tag: true
+  static_image_support: false
+CLOUDINARY_URL=cloudinary://144655146287369:f9vbfzfxtnE1K1gkO0YKL8Janjw@cloudolga
