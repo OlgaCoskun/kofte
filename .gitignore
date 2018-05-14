@@ -26,7 +26,6 @@
 .DS_Store
 */.DS_Store
 
-.env
-/config/*
+
 public/uploads
 
