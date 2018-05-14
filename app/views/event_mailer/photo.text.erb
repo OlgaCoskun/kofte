@@ -1,10 +1,8 @@
 Новая фотка
 ------------------
 
-<% unless @event.user.name == @photo.user %>
-  <%= image_tag(@photo.photo.url) %>
-<% end %>
+Имя: <%= @name %>
 
------------------
-<%= t '.author' %>
-Автор: <%= @photo.user.name %>
+Пользователь <%= @photo.user.name %>
+
+<%= image_tag(@photo.photo.url) %>>

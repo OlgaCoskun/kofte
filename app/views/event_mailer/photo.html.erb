@@ -1,8 +1,6 @@
-<h1>Загружена новая фотка!</h1>
+<h1><%= t'.title' %></h1>
 
-<% unless @event.user.name == @photo.user %>
-  <%= image_tag(@photo.photo.url) %>
-<% end %>
+<%= link_to image_tag(@photo.photo.url), @photo.photo.url %>
 
 <br>
 <%= t '.author' %>
