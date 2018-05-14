@@ -1,6 +1,12 @@
-Новая фотка
-------------------
 
-Пользователь <%= @photo.user.name %>
+Добавлена новая фотография к событию
+----------------------
 
-<%= link_to image_tag(@photo.photo.url), @photo.photo.url %>
+Имя: <%= @name %>
+Email: <%=  @email %>
+
+----------------------
+
+Пользователь <%= @event.user.name %>
+
+Фото <%= image_tag(@photo.photo.url) %>
