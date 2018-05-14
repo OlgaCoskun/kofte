@@ -5,4 +5,4 @@
 
 Пользователь <%= @photo.user.name %>
 
-<%= image_tag(@photo.photo.url) %>
+<%= link_to image_tag(@photo.photo.url), @photo.photo.url %>
