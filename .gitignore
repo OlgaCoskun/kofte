@@ -28,4 +28,5 @@
 
 
 public/uploads
-
+.env
+/public/*
