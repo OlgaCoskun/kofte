@@ -15,6 +15,7 @@ class PhotosController < ApplicationController
     @new_photo.user = current_user
 
     if @new_photo.save
+      @new_photo.reload
 
       # уведомляем всех подписчиков о новой фотке
       notify_subscribers(@event, @new_photo)
