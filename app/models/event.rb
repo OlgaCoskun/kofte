@@ -21,4 +21,9 @@ class Event < ApplicationRecord
     (subscribers + [user]).uniq
   end
 
+  # совпадает ли переданный параметр с пинкодом этого события
+  def pincode_valid?(pin2chek)
+    pincode == pin2chek
+  end
+
 end
