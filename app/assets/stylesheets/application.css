@@ -74,3 +74,9 @@
 
 .form-group br {
   display: none !important;}
+
+#map {
+  width: 360px;
+  height: 300px;
+  margin-top: 30px;
+}
