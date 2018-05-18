@@ -24,6 +24,7 @@ gem 'jquery-rails'
 
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'fog'
 gem 'mini_magick'
 
 # Use Puma as the app server
