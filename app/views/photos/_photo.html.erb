@@ -2,7 +2,7 @@
 <div class="event-photo buffer-both">
 
 <!--  Корзина в слайдере-->
-  <%= link_to fa_icon('trash-o'), event_photo_path(photo.event, photo),
+  <%= link_to fa_icon('trash-o'), event_photo_path(photo),
               method: :delete, data: {confirm: 'В корзинку положим?'} if current_user_can_edit?(photo) %>
 
 <!--  Картинки в слайдере-->
