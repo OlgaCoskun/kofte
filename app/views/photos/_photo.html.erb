@@ -1,13 +1,10 @@
 <%# Паршал для вывода отдельной фотографии %>
 <div class="event-photo buffer-both">
-
-<!--  Корзина в слайдере-->
-  <%= link_to fa_icon('trash-o'), event_photo_path(photo),
-              method: :delete, data: {confirm: 'В корзинку положим?'} %>
-
+  
 <!--  Картинки в слайдере-->
   <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
       toggle: 'lightbox',gallery: 'event-photos', title: "Добавил #{render partial: 'users/user', object: photo.user}",
+       alt: "#{render partial: 'photos/trash'}"
   } %>
 
   <%# Показываем не только фотку, но и юзаре, который её добавил %>
