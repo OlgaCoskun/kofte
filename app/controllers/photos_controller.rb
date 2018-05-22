@@ -35,8 +35,7 @@ class PhotosController < ApplicationController
     # Проверяем, может ли пользователь удалить фотографию
     # Если может — удаляем, нет, меняем сообщение
     if current_user_can_edit?(@photo)
-      @photo.reload if @photo.destroy
-
+      @photo.destroy
     else
       message = {alert: I18n.t('controllers.photos.error')}
     end
