@@ -1,13 +1,14 @@
 <%# Паршал для вывода отдельной фотографии %>
 <div class="event-photo buffer-both">
 
-  <%= link_to( fa_icon('trash'), event_photo_path(@event[:id], photo[:id]), method: :delete, data: {
+  <%= link_to( fa_icon('trash'), event_photo_path(@event, photo), method: :delete, data: {
       confirm: t('controllers.photos.photo_destroy')
   } ) %>
 
 <!--  Картинки в слайдере-->
   <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
-      toggle: 'lightbox',gallery: 'event-photos', title: "Добавил #{render partial: 'users/user', object: photo.user}"
+      toggle: 'lightbox',gallery: 'event-photos', title: "Добавил #{render partial: 'users/user', object: photo.user} 
+#{render partial: 'photos/kull'}"
   } %>
 
   <%# Показываем не только фотку, но и юзаре, который её добавил %>
