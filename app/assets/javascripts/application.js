@@ -3,4 +3,5 @@
 //= require twitter/bootstrap
 //= require twitter/bootstrap/alert
 //= require map
-//= require_tree .
+//= require ekko-lightbox
+//= require_directory .
