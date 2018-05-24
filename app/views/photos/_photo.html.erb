@@ -4,7 +4,9 @@
 <!--  Картинки в слайдере-->
   <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
       toggle: 'lightbox',gallery: 'event-photos', title: "Добавил #{render partial: 'users/user', object: photo.user}
-      #{render partial: 'photos/trash', object: [@photo = photo, @event]}"
+      #{link_to(fa_icon('trash'), event_photo_path(@event, photo), method: :delete, data: {
+          confirm: t('controllers.photos.photo_destroy')
+      })}"
   } %>
 
   <%# Показываем не только фотку, но и юзаре, который её добавил %>
