@@ -1,0 +1,3 @@
+<%= link_to(fa_icon('trash'), event_photo_path(@event, @photo), method: :delete, data: {
+    confirm: t('controllers.photos.photo_destroy')
+}) %>
