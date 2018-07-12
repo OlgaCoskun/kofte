@@ -1,24 +1,37 @@
-# README
+## Kofte
+***
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Kofte is an event organizer.
 
-Things you may want to cover:
+Create your party, invite friends, subscribe to other events, attach photos and leave comments in Kofte service!
 
-* Ruby version
+##### Web-page:
 
-* System dependencies
+[Kofte](https://kofte.herokuapp.com)
 
-* Configuration
+### Launching
+***
 
-* Database creation
+##### Requirements:
 
-* Database initialization
+* Ruby version _>= 2.3.0_
 
-* How to run the test suite
+* Rails version _~> 5.0.0_
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+##### Commands
+Clone the repository to your local machine and run following commands:
 
-* ...
+```
+$ bundle
+```
+
+```
+$ bundle exec rake db:migrate
+```
+
+```
+rails s
+```
+
+Then open a `localhost:3000` page in your browse
