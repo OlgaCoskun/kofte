@@ -28,3 +28,8 @@
 
 
 public/uploads
+/config/secrets.yml
+/config/cloudinary.yml
+/config/environments/development.rb
+.env
+
